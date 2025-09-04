@@ -11,7 +11,7 @@
     @apply scroll-smooth;
   }
   body {
-    @apply bg-gradient-to-r from-primary to-secondary transition-colors duration-300 text-base-content w-full items-center overflow-hidden grid h-dvh;
+    @apply bg-gradient-to-r from-primary to-secondary transition-colors duration-300 text-base-content w-full items-center overflow-x-hidden grid h-dvh;
   }
 
   .meteor {
@@ -40,7 +40,7 @@
   --color-base-100: oklch(100% 0 0);
   --color-base-200: oklch(98% 0 0);
   --color-base-300: oklch(95% 0 0);
-  --color-base-content: var(--color-neutral-100);
+  --color-base-content: var(--color-neutral-50);
   --color-primary: var(--color-blue-500);
   --color-primary-content: oklch(93% 0.034 272.788);
   --color-secondary: var(--color-violet-500);
