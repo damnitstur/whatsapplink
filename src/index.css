@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+@plugin "daisyui/theme" {
+  name: 'light';
+  default: false;
+  prefersdark: false;
+  color-scheme: 'light';
+}
+:root {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-gradient-to-r from-primary to-secondary transition-colors duration-300 text-base-content w-full items-center overflow-hidden grid h-dvh;
+  }
+
+  .meteor {
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: 40px;
+    background: white;
+    opacity: 0.7;
+    transform: rotate(45deg);
+    animation: meteor-fall 2s linear infinite;
+  }
+
+  @keyframes meteor-fall {
+    0% {
+      transform: translateY(-50px) translateX(0) rotate(45deg);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(500px) translateX(500px) rotate(45deg);
+      opacity: 0;
+    }
+  }
+}
+@theme {
+  --color-base-100: oklch(100% 0 0);
+  --color-base-200: oklch(98% 0 0);
+  --color-base-300: oklch(95% 0 0);
+  --color-base-content: var(--color-neutral-100);
+  --color-primary: var(--color-blue-500);
+  --color-primary-content: oklch(93% 0.034 272.788);
+  --color-secondary: var(--color-violet-500);
+  --color-secondary-content: oklch(94% 0.028 342.258);
+  --color-accent: oklch(77% 0.152 181.912);
+  --color-accent-content: oklch(38% 0.063 188.416);
+  --color-neutral: oklch(14% 0.005 285.823);
+  --color-neutral-content: oklch(92% 0.004 286.32);
+  --color-info: oklch(74% 0.16 232.661);
+  --color-info-content: oklch(29% 0.066 243.157);
+  --color-success: oklch(76% 0.177 163.223);
+  --color-success-content: oklch(37% 0.077 168.94);
+  --color-warning: oklch(82% 0.189 84.429);
+  --color-warning-content: oklch(41% 0.112 45.904);
+  --color-error: oklch(71% 0.194 13.428);
+  --color-error-content: oklch(27% 0.105 12.094);
+  --radius-selector: 0.5rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
